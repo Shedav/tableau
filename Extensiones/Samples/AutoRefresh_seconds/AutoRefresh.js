@@ -21,13 +21,13 @@
   let activeDatasourceIdList = [];
   let isPageInFocus = true;
 
-  // Set up event listeners for focus and blur
-  window.onfocus = function () {
-    isPageInFocus = true;
-  };
-  window.onblur = function () {
-    isPageInFocus = false;
-  };
+  // // Set up event listeners for focus and blur
+  // window.onfocus = function () {
+  //   isPageInFocus = true;
+  // };
+  // window.onblur = function () {
+  //   isPageInFocus = false;
+  // };
 
   $(document).ready(function () {
     // When initializing an extension, an optional object is passed that maps a special ID (which
