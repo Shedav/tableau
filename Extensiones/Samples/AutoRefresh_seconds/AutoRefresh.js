@@ -21,13 +21,13 @@
   let activeDatasourceIdList = [];
   let isPageInFocus = true;
 
-  // Set up event listeners for focus and blur
-  window.onfocus = function () {
-    isPageInFocus = true;
-  };
-  window.onblur = function () {
-    isPageInFocus = false;
-  };
+  // // Set up event listeners for focus and blur
+  // window.onfocus = function () {
+  //   isPageInFocus = true;
+  // };
+  // window.onblur = function () {
+  //   isPageInFocus = false;
+  // };
 
   $(document).ready(function () {
     // When initializing an extension, an optional object is passed that maps a special ID (which
@@ -68,7 +68,7 @@
     // This uses the window.location.origin property to retrieve the scheme, hostname, and 
     // port where the parent extension is currently running, so this string doesn't have
     // to be updated if the extension is deployed to a new location.
-    const popupUrl = `./AutoRefreshDialog.html`;
+    const popupUrl = `${window.location.origin}/Extensiones/Samples/AutoRefresh_seconds/AutoRefreshDialog.html`;
 
     /**
      * This is the API call that actually displays the popup extension to the user.  The
