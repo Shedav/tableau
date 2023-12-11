@@ -58,7 +58,7 @@
 				updateExtensionBasedOnSettings(settingsEvent.newSettings)
 			});
 
-			tableau.extensions.dashboardContent.dashboard.addEventListener(tableau.TableauEventType.DashboardLayoutChanged, handleChangeVisibility());
+			// tableau.extensions.dashboardContent.dashboard.addEventListener(tableau.TableauEventType.DashboardLayoutChanged, handleChangeVisibility());
 		});
 	});
 
