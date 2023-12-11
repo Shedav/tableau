@@ -33,8 +33,6 @@
 	}
 
 	$(document).ready(function () {
-
-
 		window.onfocus = function () {
 			isPageInFocus = true;
 			console.warn('focus')
