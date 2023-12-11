@@ -27,6 +27,11 @@
 		isPageInFocus = document.visibilityState === 'visible';
 	})
 
+	function handleChangeVisibility(values) {
+		console.warn('handleChangeVisibility: ', values);
+
+	}
+
 	$(document).ready(function () {
 		// When initializing an extension, an optional object is passed that maps a special ID (which
 		// must be 'configure') to a function.  This, in conjuction with adding the correct context menu
@@ -43,9 +48,7 @@
 				updateExtensionBasedOnSettings(settingsEvent.newSettings)
 			});
 
-			tableau.extensions.dashboardContent.dashboard.addEventListener(tableau.TableauEventType.DashboardLayoutChanged, (settingsEvent) => {
-				updateExtensionBasedOnSettings(settingsEvent.newSettings)
-			});
+			tableau.extensions.dashboardContent.dashboard.addEventListener(tableau.TableauEventType.DashboardLayoutChanged, handleChangeVisibility());
 		});
 	});
 
