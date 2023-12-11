@@ -33,6 +33,16 @@
 	}
 
 	$(document).ready(function () {
+
+
+		window.onfocus = function () {
+			isPageInFocus = true;
+			console.warn('focus')
+		};
+		window.onblur = function () {
+			isPageInFocus = false;
+			console.warn('blur')
+		};
 		// When initializing an extension, an optional object is passed that maps a special ID (which
 		// must be 'configure') to a function.  This, in conjuction with adding the correct context menu
 		// item to the manifest, will add a new "Configure..." context menu item to the zone of extension
