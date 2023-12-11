@@ -128,6 +128,7 @@
 	function setupRefreshInterval(interval) {
 		refreshInterval = setInterval(function () {
 			if (isPageInFocus) {
+				console.warn('call');
 				let dashboard = tableau.extensions.dashboardContent.dashboard;
 				dashboard.worksheets.forEach(function (worksheet) {
 					worksheet.getDataSourcesAsync().then(function (datasources) {
@@ -138,6 +139,8 @@
 						});
 					});
 				});
+			} else {
+				console.warn('skip');
 			}
 		}, interval * 1000);
 	}
